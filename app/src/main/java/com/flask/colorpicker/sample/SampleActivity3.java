@@ -16,6 +16,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.flash.colorpicker.R;
+
 public class SampleActivity3 extends AppCompatActivity {
 
 	/**
