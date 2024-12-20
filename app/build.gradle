@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'maven-publish'
 
 android {
 	compileSdk 35
@@ -14,6 +15,17 @@ android {
 
 	namespace "com.flash.colorpicker"
 
+	compileOptions{
+		sourceCompatibility = JavaVersion.VERSION_11
+		targetCompatibility = JavaVersion.VERSION_11
+	}
+
+	publishing {
+		singleVariant("release") {
+			withSourcesJar()
+			withJavadocJar()
+		}
+	}
 }
 
 dependencies {
@@ -22,4 +34,18 @@ dependencies {
 	implementation 'androidx.appcompat:appcompat:1.7.0'
 	implementation 'androidx.constraintlayout:constraintlayout:2.2.0'
 	implementation 'com.google.android.material:material:1.12.0'
+}
+
+publishing {
+	publications {
+		release(MavenPublication) {
+			groupId = 'com.github.nulide'
+			artifactId = 'materialcolorpicker'
+			version = '0.0.16'
+
+			afterEvaluate {
+				from components.release
+			}
+		}
+	}
 }
