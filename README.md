@@ -5,57 +5,13 @@ Color Picker
 
 ![icon](https://github.com/QuadFlask/colorpicker/blob/master/app/src/main/res/drawable-xxxhdpi/ic_launcher.png)
 
-simple android color picker with color wheel and lightness bar.
+Simple android color picker with color wheel and lightness bar.
 
-[Play Store link](https://play.google.com/store/apps/details?id=com.flask.colorpicker.sample)
+This fork is updated to use the latest dependencies and MaterialAlertDialog instead of AlertDialog
 
 ## Demo video
 
 [Youtube](https://youtu.be/MwWi9X7eqNI)
-
-
-## Screenshot
-
-### WHEEL_TYPE.FLOWER
-![screenshot3.png](https://github.com/QuadFlask/colorpicker/blob/master/screenshot/screenshot3.png)
-
-### WHEEL_TYPE.CIRCLE
-![screenshot.png](https://github.com/QuadFlask/colorpicker/blob/master/screenshot/screenshot.png)
-
-
-## How to add dependency?
-
-This library is not released in Maven Central, but instead you can use [JitPack](https://jitpack.io)
-
-add remote maven url in `allprojects.repositories`
-
-```groovy
-allprojects {
-	repositories {
-		maven { url "https://jitpack.io" }
-	}
-}
-```
-
-then add a library dependency
-
-```groovy
-dependencies {
-	implementation 'com.github.QuadFlask:colorpicker:0.0.15'
-}
-```
-
-or, you can manually download `aar` and put into your project's `libs` directory.
-
-and add dependency
-
-```groovy
-dependencies {
-	compile(name:'[arrFileName]', ext:'aar')
-}
-```
-
-> check out latest version at [releases](https://github.com/QuadFlask/colorpicker/releases)
 
 ## Usage
 As a dialog
